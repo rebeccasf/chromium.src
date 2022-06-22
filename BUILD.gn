@@ -137,7 +137,8 @@ group("gn_all") {
       "//chrome/test:browser_tests",
       "//chrome/test:interactive_ui_tests",
       "//chrome/test:sync_integration_tests",
-      "//chrome/test/chromedriver:chromedriver_unittests",
+      # Reb's WA
+      # "//chrome/test/chromedriver:chromedriver_unittests",
       "//components/subresource_filter/tools:subresource_filter_tools",
       "//components/zucchini:zucchini",
       "//components/zucchini:zucchini_unittests",
@@ -541,7 +542,8 @@ group("gn_all") {
       deps += [
         "//chrome/test:load_library_perf_tests",
         "//chrome/test:sync_performance_tests",
-        "//chrome/test/chromedriver:chromedriver",
+        # Reb's WA
+        # "//chrome/test/chromedriver:chromedriver",
         "//courgette:courgette",
         "//courgette:courgette_fuzz",
         "//courgette:courgette_minimal_tool",
@@ -1077,7 +1079,8 @@ if (!is_ios) {
       ]
       data_deps = [
         "//chrome:chrome",
-        "//chrome/test/chromedriver",
+        # Reb's WA
+        # "//chrome/test/chromedriver",
         "//testing:test_scripts_shared",
         "//third_party/catapult/third_party/typ",
       ]
@@ -1089,7 +1092,8 @@ if (!is_ios) {
       script = "//testing/scripts/run_wpt_tests.py"
       data_deps = [
         "//chrome:chrome",
-        "//chrome/test/chromedriver",
+        # Reb's WA
+        # "//chrome/test/chromedriver",
         "//third_party/blink/tools:wpt_tests_isolate",
         "//tools/imagediff",
       ]
