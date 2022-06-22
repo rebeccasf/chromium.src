@@ -44,7 +44,7 @@ class UpdateQueryParams {
   // Returns the value we use for the "nacl_arch" parameter. Note that this may
   // be different from the "arch" parameter above (e.g. one may be 32-bit and
   // the other 64-bit). Possible return values include: "x86-32", "x86-64",
-  // "arm", "mips32", and "ppc64".
+  // "arm", "mips32", "ppc64", and "riscv64".
   static const char* GetNaclArch();
 
   // Returns the current version of Chrome/Chromium.
