@@ -249,7 +249,7 @@ vars = {
   'pdfium_git': 'https://pdfium.googlesource.com',
   'quiche_git': 'https://quiche.googlesource.com',
   'skia_git': 'https://skia.googlesource.com',
-  'starfive_git'" 'http://192.168.110.45/rebecca.chang',
+  'starfive_git': 'http://192.168.110.45/rebecca.chang',
   'swiftshader_git': 'https://swiftshader.googlesource.com',
   'webrtc_git': 'https://webrtc.googlesource.com',
   # Three lines of non-changing comments so that
