@@ -267,7 +267,7 @@ vars = {
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling SwiftShader
   # and whatever else without interference from each other.
-  'swiftshader_revision': '2400435e05b1b97aaaec40bf62c3dbdcda978e53',
+  'swiftshader_revision': '1b159f6cdecba5e29858e50a998951d6c5ef91d3',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling PDFium
   # and whatever else without interference from each other.
@@ -278,7 +278,7 @@ vars = {
   #
   # Note this revision should be updated with
   # third_party/boringssl/roll_boringssl.py, not roll-dep.
-  'boringssl_revision': '4d955d20d27bcf3ae71df091ad17d95229a7eb56',
+  'boringssl_revision': '4566bb5fe517f7f141b5fe935c559fc4311af35d',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling google-toolbox-for-mac
   # and whatever else without interference from each other.
