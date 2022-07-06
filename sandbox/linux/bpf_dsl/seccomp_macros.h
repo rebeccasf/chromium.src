@@ -344,7 +344,7 @@ struct regs_struct {
 #define SECCOMP_PT_PARM5(_regs) (_regs).regs[4]
 #define SECCOMP_PT_PARM6(_regs) (_regs).regs[5]
 
-#elif defined(__riscv) && (__riscv_xlen == 64)
+#elif defined(__riscv)
 struct regs_struct {
   unsigned long regs[32];
 };
