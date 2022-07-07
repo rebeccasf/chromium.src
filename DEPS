@@ -1082,7 +1082,7 @@ deps = {
   },
 
   'src/third_party/breakpad/breakpad':
-    Var('starfive_git') + '/breakpad.git' + '@' + '5224ce1f5c669d8b31247d600b4c9c265c4e9ff8',
+    Var('starfive_git') + '/breakpad.git' + '@' + '5cddaa07808a7063813a955b46ba470021552afd',
 
   'src/third_party/byte_buddy': {
       'packages': [
