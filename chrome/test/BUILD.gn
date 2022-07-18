@@ -401,7 +401,6 @@ static_library("test_support") {
     ]
     public_deps += [
       "//components/crash/core/app",
-      "//third_party/breakpad",
     ]
   }
 
@@ -9298,9 +9297,6 @@ test("chrome_app_unittests") {
     "//components/heap_profiling/in_process",
     "//components/safe_browsing:buildflags",
   ]
-  if (!is_fuchsia) {
-    deps += [ "//third_party/breakpad:client" ]
-  }
   if (enable_gwp_asan) {
     deps += [ "//components/gwp_asan/client" ]
   }
