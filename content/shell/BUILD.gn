@@ -652,7 +652,6 @@ if (is_mac) {
     testonly = true
     info_plist = "app/framework-Info.plist"
     args = [
-      "--breakpad=0",
       "--keystone=0",
       "--scm=1",
       "--version",
@@ -726,7 +725,6 @@ if (is_mac) {
     testonly = true
     info_plist = "app/helper-Info.plist"
     args = [
-      "--breakpad=0",
       "--keystone=0",
       "--scm=0",
       "--version",
@@ -857,7 +855,6 @@ group("content_shell_crash_test") {
     "//third_party/mesa_headers",
   ]
   data = [
-    "//content/shell/tools/breakpad_integration_test.py",
     "//testing/scripts/content_shell_crash_test.py",
   ]
   if (is_mac && !use_system_xcode) {
@@ -873,26 +870,16 @@ group("content_shell_crash_test") {
   }
   if (is_posix) {
     data += [
-      "//components/crash/content/tools/generate_breakpad_symbols.py",
       "//components/crash/content/tools/dmp2minidump.py",
     ]
   }
   if (is_win) {
     data_deps += [ "//build/win:copy_cdb_to_output" ]
   }
-  if (is_posix) {
-    data_deps += [
-      "//third_party/breakpad:dump_syms",
-      "//third_party/breakpad:minidump_stackwalk",
-    ]
-  }
   if (is_android) {
     data_deps += [
       "//build/android:devil_chromium_py",
       "//build/android:test_runner_py",
-      "//third_party/breakpad:microdump_stackwalk",
-      "//third_party/breakpad:minidump_dump",
-      "//third_party/breakpad:symupload",
       "//tools/android/forwarder2",
     ]
   }
