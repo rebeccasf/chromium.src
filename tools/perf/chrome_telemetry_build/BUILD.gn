@@ -46,8 +46,6 @@ group("telemetry_chrome_test") {
   }
 
   if (is_linux || is_chromeos) {
-    data_deps += [ "//third_party/breakpad:dump_syms($host_toolchain)" ]
-
     # CrOS currently has issues with the locally compiled version of
     # crashpad_database_util, so only include it on traditional Linux
     # platforms.
@@ -61,7 +59,6 @@ group("telemetry_chrome_test") {
     data_deps += [
       "//chrome:chrome_framework",
       "//chrome:chrome_helper_app_default",
-      "//third_party/breakpad:dump_syms",
       "//third_party/crashpad/crashpad/tools:crashpad_database_util",
     ]
   }
@@ -201,7 +198,6 @@ group("telemetry_chrome_test_without_chrome") {
 
   data = [
     "//build/android/pylib/",  # chromium_config.py uses pylib to look for Java
-    "//components/crash/content/tools/generate_breakpad_symbols.py",
     "//tools/perf/chrome_telemetry_build/",
     "//tools/perf/core/",  # chrome_telemetry_build/ depends on core/
   ]
@@ -210,20 +206,6 @@ group("telemetry_chrome_test_without_chrome") {
     "//third_party/catapult:telemetry_chrome_test_support",
     "//tools/metrics:metrics_python_tests",
   ]
-
-  # Cr-Fuchsia doesn't support breakpad.
-  if (!is_win && !is_fuchsia) {
-    data_deps += [
-      # This is defined for Windows, but is unused by Telemetry on
-      # Windows, and including it can have issues when cross-compiling
-      # for Arm-based Windows.
-      "//third_party/breakpad:dump_syms",
-
-      # These explicitly not defined for Windows builds in Breakpad.
-      "//third_party/breakpad:minidump_dump",
-      "//third_party/breakpad:minidump_stackwalk",
-    ]
-  }
 
   if (is_mac) {
     data += [
