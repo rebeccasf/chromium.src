@@ -97,10 +97,7 @@ target(crash_key_target_type, "crash_key_lib") {
     sources += [ "crash_key_crashpad.cc" ]
     deps += [ "//third_party/crashpad/crashpad/client" ]
   } else {
-    include_dirs = [ "//third_party/breakpad/breakpad/src" ]
-
     if (is_ios) {
-      sources += [ "crash_key_breakpad_ios.mm" ]
       deps += [
         ":reporter_running_ios",
         "//components/previous_session_info",
@@ -109,12 +106,10 @@ target(crash_key_target_type, "crash_key_lib") {
       configs += [ "//build/config/compiler:enable_arc" ]
     } else {
       sources += [
-        "crash_key_breakpad.cc",
         "crash_key_internal.h",
       ]
     }
 
-    deps += [ "//third_party/breakpad:client" ]
     if (use_combined_annotations) {
       public_deps += [ "//third_party/crashpad/crashpad/client" ]
     }
@@ -184,15 +179,6 @@ source_set("unit_tests") {
 
   if (is_apple) {
     sources += [ "objc_zombie_unittest.mm" ]
-  }
-
-  if (is_ios) {
-    sources += [ "crash_key_breakpad_ios_unittest.cc" ]
-    deps += [ "//third_party/breakpad:client" ]
-    include_dirs = [ "//third_party/breakpad/breakpad/src/" ]
-  } else if (!is_mac && !is_win && !is_fuchsia && !is_android) {
-    include_dirs = [ "//third_party/breakpad/breakpad/src/" ]
-    sources += [ "crash_key_breakpad_unittest.cc" ]
   }
 
   # TODO(crbug.com/1186718): Enable when crash keys are supported on Fuchsia.

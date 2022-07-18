@@ -35,13 +35,6 @@ source_set("browser") {
     deps += [ "//third_party/crashpad/crashpad/client" ]
   }
 
-  # This is not in the GYP build but this target includes breakpad client
-  # headers, so add the dependency here.
-  if ((is_posix && !is_ios) || is_fuchsia) {
-    configs += [ "//third_party/breakpad:client_config" ]
-    public_configs = [ "//third_party/breakpad:client_config" ]
-  }
-
   if (is_android) {
     sources += [
       "child_exit_observer_android.cc",
@@ -59,8 +52,6 @@ source_set("browser") {
       "//components/crash/android:jni_headers",
       "//mojo/public/cpp/bindings",
     ]
-  } else {
-    deps += [ "//third_party/breakpad:client" ]
   }
 }
 

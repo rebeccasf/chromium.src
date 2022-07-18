@@ -54,9 +54,6 @@ static_library("app") {
 
   if (is_linux || is_chromeos) {
     sources += [
-      "breakpad_linux.cc",
-      "breakpad_linux.h",
-      "breakpad_linux_impl.h",
       "crashpad_linux.cc",
     ]
   }
@@ -94,10 +91,6 @@ static_library("app") {
       "//components/crash/core/common",
       "//sandbox",
     ]
-  }
-
-  if (is_linux || is_chromeos) {
-    deps += [ "//third_party/breakpad:client" ]
   }
 
   if (is_win) {
@@ -287,7 +280,6 @@ source_set("unit_tests") {
     ]
     deps += [
       ":run_as_crashpad_handler",
-      "//third_party/breakpad:client",
       "//third_party/crashpad/crashpad/client:client",
       "//third_party/crashpad/crashpad/snapshot:snapshot",
       "//third_party/crashpad/crashpad/util",
