@@ -31,7 +31,10 @@ config("compiler") {
   if (current_cpu == "riscv64") {
     cflags = []
     cflags += [ "-I../../build/linux/debian_sid_riscv64-sysroot/usr/include",
-                "-I../../build/linux/debian_sid_riscv64-sysroot/usr/include/riscv64-linux-gnu", ]
+                "-I../../build/linux/debian_sid_riscv64-sysroot/usr/include/riscv64-linux-gnu",
+                "-I../../build/linux/debian_sid_riscv64-sysroot/usr/lib",
+                "-I../../build/linux/debian_sid_riscv64-sysroot/usr/lib/riscv64-linux-gnu",
+    ]
   }
 }
 
