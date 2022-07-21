@@ -248,6 +248,7 @@ vars = {
   'nwjs_git': 'https://github.com/nwjs',
   'pdfium_git': 'https://pdfium.googlesource.com',
   'quiche_git': 'https://quiche.googlesource.com',
+  'reb_git': 'https://github.com/rebeccasf',
   'skia_git': 'https://skia.googlesource.com',
   'starfive_git': 'http://192.168.110.45/rebecca.chang',
   'swiftshader_git': 'https://swiftshader.googlesource.com',
@@ -263,7 +264,7 @@ vars = {
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling ANGLE
   # and whatever else without interference from each other.
-  'angle_revision': '58d019c4251d4fefafc6964e663d2cf9e82e4488',
+  'angle_revision': 'e727362c7dd939ae2637e6880caa84aedcb379c7',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling SwiftShader
   # and whatever else without interference from each other.
@@ -370,7 +371,7 @@ vars = {
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling feed
   # and whatever else without interference from each other.
-  'dawn_revision': 'ed46e29c82def4fb218d5efc89039aeeab704e29',
+  'dawn_revision': '007a017f7131e96cb80f73ce5b29cbd15edb21cb',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling feed
   # and whatever else without interference from each other.
@@ -430,7 +431,7 @@ vars = {
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling feed
   # and whatever else without interference from each other.
-  'highway_revision': '6667b0cd38025d0a0457537e9badcbc6be6e2049',
+  'highway_revision': '686db08f6eb2739d659ca3c8896348df232d115d',
 
   # If you change this, also update the libc++ revision in
   # //buildtools/deps_revisions.gni.
@@ -1024,19 +1025,19 @@ deps = {
   },
 
   'src/third_party/angle':
-    Var('starfive_git') + '/angle.git' + '@' +  Var('angle_revision'),
+    Var('reb_git') + '/angle.git' + '@' +  Var('angle_revision'),
 
   'src/third_party/dav1d/libdav1d':
     Var('chromium_git') + '/external/github.com/videolan/dav1d.git' + '@' + 'b1a5189c9d37c837099ce50852b6ce9597b89b0c',
 
   'src/third_party/dawn':
-    Var('starfive_git') + '/dawn.git' + '@' +  Var('dawn_revision'),
+    Var('reb_git') + '/dawn.git' + '@' +  Var('dawn_revision'),
 
   'src/third_party/libjxl/src':
     Var('chromium_git') + '/external/gitlab.com/wg1/jpeg-xl.git' + '@' + Var('libjxl_revision'),
 
   'src/third_party/highway/src':
-    Var('starfive_git') + '/highway.git' + '@' + Var('highway_revision'),
+    Var('chromium_git') + '/external/github.com/google/highway.git' + '@' + Var('highway_revision'),
 
   'src/third_party/glfw/src':
     Var('chromium_git') + '/external/github.com/glfw/glfw.git@' +  '94773111300fee0453844a4c9407af7e880b4df8',
@@ -1082,7 +1083,7 @@ deps = {
   },
 
   'src/third_party/breakpad/breakpad':
-    Var('starfive_git') + '/breakpad.git' + '@' + 'ff67adf1dc6b1fc57800025c5eac96b81dcf8d34',
+    Var('reb_git') + '/breakpad.git' + '@' + 'ce143c20971c475839849813145c8802368c0bb9',
 
   'src/third_party/byte_buddy': {
       'packages': [
@@ -1187,7 +1188,7 @@ deps = {
     Var('chromium_git') + '/external/github.com/google/farmhash.git' + '@' + '816a4ae622e964763ca0862d9dbd19324a1eaf45',
 
   'src/third_party/ffmpeg':
-    Var('starfive_git') + '/ffmpeg.git' + '@' + '1a69da082435b0e7b56f5c09e4621c29aae24077',
+    Var('reb_git') + '/chromium-ffmpeg.git' + '@' + '1a69da082435b0e7b56f5c09e4621c29aae24077',
 
   'src/third_party/flac':
     Var('chromium_git') + '/chromium/deps/flac.git' + '@' + 'af862024c8c8fa0ae07ced05e89013d881b00596',
