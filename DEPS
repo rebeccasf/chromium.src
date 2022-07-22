@@ -250,13 +250,12 @@ vars = {
   'quiche_git': 'https://quiche.googlesource.com',
   'reb_git': 'https://github.com/rebeccasf',
   'skia_git': 'https://skia.googlesource.com',
-  'starfive_git': 'http://192.168.110.45/rebecca.chang',
   'swiftshader_git': 'https://swiftshader.googlesource.com',
   'webrtc_git': 'https://webrtc.googlesource.com',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling Skia
   # and whatever else without interference from each other.
-  'skia_revision': '5cb6630e4b6a0f12f79a650172cbf591880bdf16',
+  'skia_revision': '1f72cbcf836b7aecdaa4cffafff7429da067227e',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling V8
   # and whatever else without interference from each other.
@@ -272,7 +271,7 @@ vars = {
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling PDFium
   # and whatever else without interference from each other.
-  'pdfium_revision': 'dc309a0646a59a165ec1b50d4a36019c170bea43',
+  'pdfium_revision': '42bc83a83f49ae209bed3a966231f055992efd31',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling BoringSSL
   # and whatever else without interference from each other.
@@ -1531,7 +1530,7 @@ deps = {
   },
 
   'src/third_party/pdfium':
-    Var('starfive_git') + '/pdfium.git' + '@' +  Var('pdfium_revision'),
+    Var('reb_git') + '/pdfium.git' + '@' +  Var('pdfium_revision'),
 
   # Parses Windows PE/COFF executable format.
   'src/third_party/pefile': {
@@ -1540,7 +1539,7 @@ deps = {
   },
 
   'src/third_party/perfetto':
-    Var('starfive_git') + '/perfetto.git' + '@' + '631d8f709546d5bcb388925e08d795344c92df28',
+    Var('reb_git') + '/perfetto.git' + '@' + 'dda6a327747d480e8d3c109db14109c746b3d81b',
 
   'src/third_party/perl': {
       'url': Var('chromium_git') + '/chromium/deps/perl.git' + '@' + '6f3e5028eb65d0b4c5fdd792106ac4c84eee1eb3',
@@ -1670,7 +1669,7 @@ deps = {
     Var('chromium_git') + '/external/github.com/google/ruy.git' + '@' + '7ef39c5745a61f43071e699c6a96da41701ae59f',
 
   'src/third_party/skia':
-    Var('starfive_git') + '/skia.git' + '@' +  Var('skia_revision'),
+    Var('reb_git') + '/skia.git' + '@' +  Var('skia_revision'),
 
   'src/third_party/smhasher/src':
     Var('chromium_git') + '/external/smhasher.git' + '@' + 'e87738e57558e0ec472b2fc3a643b838e5b6e88f',
@@ -1761,7 +1760,7 @@ deps = {
     Var('chromium_git') + '/external/github.com/gpuweb/cts.git' + '@' + 'a630866d89f74aa95cf3aecd78987637ee195b68',
 
   'src/third_party/webrtc':
-    Var('starfive_git') + '/webrtc.git' + '@' + 'f66ad2fa982e2f8ed53cf552b3e3313768608663',
+    Var('reb_git') + '/webrtc.git' + '@' + 'c2851cf34ba56508ec53b1de62e6ac231be8b3aa',
 
   'src/third_party/libgifcodec':
      Var('skia_git') + '/libgifcodec' + '@'+  Var('libgifcodec_revision'),
