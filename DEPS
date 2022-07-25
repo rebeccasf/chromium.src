@@ -255,7 +255,7 @@ vars = {
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling Skia
   # and whatever else without interference from each other.
-  'skia_revision': '1f72cbcf836b7aecdaa4cffafff7429da067227e',
+  'skia_revision': '4563280903c72930232692e50e387b35924aae69',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling V8
   # and whatever else without interference from each other.
@@ -263,7 +263,7 @@ vars = {
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling ANGLE
   # and whatever else without interference from each other.
-  'angle_revision': 'e727362c7dd939ae2637e6880caa84aedcb379c7',
+  'angle_revision': 'ed00a14f6501b48d2cf24df1642d49653ddc77ff',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling SwiftShader
   # and whatever else without interference from each other.
@@ -271,7 +271,7 @@ vars = {
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling PDFium
   # and whatever else without interference from each other.
-  'pdfium_revision': '42bc83a83f49ae209bed3a966231f055992efd31',
+  'pdfium_revision': '460f12789136fd73f28f82be25ba8887d5a3ed2b',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling BoringSSL
   # and whatever else without interference from each other.
@@ -430,7 +430,7 @@ vars = {
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling feed
   # and whatever else without interference from each other.
-  'highway_revision': '686db08f6eb2739d659ca3c8896348df232d115d',
+  'highway_revision': '424360251cdcfc314cfc528f53c872ecd63af0f0',
 
   # If you change this, also update the libc++ revision in
   # //buildtools/deps_revisions.gni.
@@ -1082,7 +1082,7 @@ deps = {
   },
 
   'src/third_party/breakpad/breakpad':
-    Var('reb_git') + '/breakpad.git' + '@' + 'ce143c20971c475839849813145c8802368c0bb9',
+    Var('reb_git') + '/breakpad.git' + '@' + '5f21ccb93d1f34564911c7474124fd0827d71297',
 
   'src/third_party/byte_buddy': {
       'packages': [
@@ -1539,7 +1539,7 @@ deps = {
   },
 
   'src/third_party/perfetto':
-    Var('reb_git') + '/perfetto.git' + '@' + 'dda6a327747d480e8d3c109db14109c746b3d81b',
+    Var('reb_git') + '/perfetto.git' + '@' + 'b2b7cb0ad63d66fd035ae359a3dd548ab14abfd8',
 
   'src/third_party/perl': {
       'url': Var('chromium_git') + '/chromium/deps/perl.git' + '@' + '6f3e5028eb65d0b4c5fdd792106ac4c84eee1eb3',
