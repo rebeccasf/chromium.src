@@ -430,7 +430,7 @@ vars = {
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling feed
   # and whatever else without interference from each other.
-  'highway_revision': '424360251cdcfc314cfc528f53c872ecd63af0f0',
+  'highway_revision': '6667b0cd38025d0a0457537e9badcbc6be6e2049',
 
   # If you change this, also update the libc++ revision in
   # //buildtools/deps_revisions.gni.
@@ -1036,7 +1036,7 @@ deps = {
     Var('chromium_git') + '/external/gitlab.com/wg1/jpeg-xl.git' + '@' + Var('libjxl_revision'),
 
   'src/third_party/highway/src':
-    Var('chromium_git') + '/external/github.com/google/highway.git' + '@' + Var('highway_revision'),
+    Var('reb_git') + '/highway.git' + '@' + Var('highway_revision'),
 
   'src/third_party/glfw/src':
     Var('chromium_git') + '/external/github.com/glfw/glfw.git@' +  '94773111300fee0453844a4c9407af7e880b4df8',
