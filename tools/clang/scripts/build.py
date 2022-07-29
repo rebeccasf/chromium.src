@@ -612,9 +612,10 @@ def main():
   cxxflags = []
   ldflags = []
 
-  cflags.append("-mno-relax")
-  cxxflags.append("-mno-relax")
-  ldflags.append("-mno-relax")
+  # TH workaround broke the build
+  #cflags.append("-mno-relax")
+  #cxxflags.append("-mno-relax")
+  #ldflags.append("-mno-relax")
 
   targets = 'AArch64;ARM;Mips;PowerPC;RISCV;SystemZ;WebAssembly;X86'
 
