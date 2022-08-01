@@ -1192,6 +1192,7 @@ config("compiler_cpu_abi") {
       ldflags += [
         "--target=riscv64-linux-gnu",
         "-mno-relax",
+        "-L../../build/linux/debian_sid_riscv64-sysroot/usr/lib/riscv64-linux-gnu/",
       ]
     } else if (current_cpu == "s390x") {
       cflags += [ "-m64" ]
