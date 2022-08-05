@@ -1936,6 +1936,7 @@ config("wglobal_constructors") {
 config("wexit_time_destructors") {
   if (is_clang) {
     cflags = [ "-Wexit-time-destructors" ]
+    cflags += [ "-Wno-deprecated-declarations" ]
   }
 }
 
