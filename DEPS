@@ -1187,7 +1187,7 @@ deps = {
     Var('chromium_git') + '/external/github.com/google/farmhash.git' + '@' + '816a4ae622e964763ca0862d9dbd19324a1eaf45',
 
   'src/third_party/ffmpeg':
-    Var('reb_git') + '/chromium-ffmpeg.git' + '@' + '2cc98d383ae20fc0273b74f8ea4258ce45d90737',
+    Var('reb_git') + '/chromium-ffmpeg.git' + '@' + '5e4e631521268567e626187ca73d27f78106b01b',
 
   'src/third_party/flac':
     Var('chromium_git') + '/chromium/deps/flac.git' + '@' + 'af862024c8c8fa0ae07ced05e89013d881b00596',
