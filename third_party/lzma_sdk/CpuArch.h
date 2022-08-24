@@ -98,6 +98,13 @@ MY_CPU_LE_UNALIGN means that CPU is LITTLE ENDIAN and CPU supports unaligned mem
 #endif
 
 
+#if defined(__riscv) && (__riscv_xlen == 64)
+  #define MY_CPU_NAME "riscv64"
+  #define MY_CPU_64BIT
+  #define MY_CPU_LE
+#endif
+
+
 #if  defined(__sparc64__)
   #define MY_CPU_NAME "sparc64"
   #define MY_CPU_64BIT
