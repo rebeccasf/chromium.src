@@ -259,7 +259,7 @@ vars = {
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling V8
   # and whatever else without interference from each other.
-  'v8_revision': 'e104a918db1ae901f9477a57fa179c26778e639a',
+  'v8_revision': '7dfc4b52b039fac12a8dc79b8dabb8cd7b4daf16',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling ANGLE
   # and whatever else without interference from each other.
@@ -1827,7 +1827,7 @@ deps = {
   },
 
   'src/v8':
-    Var('reb_git') + '/v8.git' + '@' +  Var('v8_revision'),
+    Var('chromium_git') + '/v8/v8.git' + '@' +  Var('v8_revision'),
 
   'src/content/nw':
     Var('reb_git') + '/nw.js.git' + '@' + '427c477b9ed73b1a86de8c04d5a9c8c33a904033',
