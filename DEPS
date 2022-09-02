@@ -1830,7 +1830,7 @@ deps = {
     Var('chromium_git') + '/v8/v8.git' + '@' +  Var('v8_revision'),
 
   'src/content/nw':
-    Var('reb_git') + '/nw.js.git' + '@' + '427c477b9ed73b1a86de8c04d5a9c8c33a904033',
+    Var('reb_git') + '/nw.js.git' + '@' + 'fd133301c1b7b2ccf966a062d990c2c62165e62f',
 
   'src/third_party/node-nw':
     Var('reb_git') + '/node.git' + '@' + '7542bf436d2425361f1febe93fbffb3330c88fce',
