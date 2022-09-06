@@ -1808,6 +1808,9 @@ deps = {
   'src/third_party/node-nw':
     Var('reb_git') + '/node.git' + '@' + '7c46b745ea0ac6cfdac0da84c2e9492c176f8948',
 
+  'src/content/nw':
+    Var('reb_git') + '/nw.js.git' + '@' + '52deb9b9ed6d4209220ab47975455b73e655b465',
+
   'src-internal': {
     'url': 'https://chrome-internal.googlesource.com/chrome/src-internal.git@d63d68d7ecdd892e8428f0b76c7f107a665e575e',
     'condition': 'checkout_src_internal',
