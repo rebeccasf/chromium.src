@@ -259,7 +259,7 @@ vars = {
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling V8
   # and whatever else without interference from each other.
-  'v8_revision': '8a561c06ef2cf18d1beb6f6aac51ff96b1bfaf7b',
+  'v8_revision': '4b713c7340503c8d7e0c7652a1495db929a0fe38',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling ANGLE
   # and whatever else without interference from each other.
@@ -1802,8 +1802,8 @@ deps = {
       'condition': 'checkout_mac',
   },
 
-  #'src/v8':
-  #  Var('chromium_git') + '/v8/v8.git' + '@' +  Var('v8_revision'),
+  'src/v8':
+    Var('reb_git') + '/v8.git' + '@' +  Var('v8_revision'),
 
   'src/third_party/node-nw':
     Var('reb_git') + '/node.git' + '@' + '7c46b745ea0ac6cfdac0da84c2e9492c176f8948',
