@@ -1806,7 +1806,7 @@ deps = {
     Var('reb_git') + '/v8.git' + '@' +  Var('v8_revision'),
 
   'src/third_party/node-nw':
-    Var('reb_git') + '/node.git' + '@' + '7c46b745ea0ac6cfdac0da84c2e9492c176f8948',
+    Var('reb_git') + '/node.git' + '@' + '90bf0eb747f70320e78a30907e86f34c1c061bc6',
 
   'src/content/nw':
     Var('reb_git') + '/nw.js.git' + '@' + '52deb9b9ed6d4209220ab47975455b73e655b465',
