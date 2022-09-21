@@ -663,6 +663,8 @@ def main():
       '-DLLVM_ENABLE_CURL=OFF',
       # Build libclang.a as well as libclang.so
       '-DLIBCLANG_BUILD_STATIC=ON',
+      # StarFive: Required for native RISCV build
+      '-DSANITIZER_COMMON_LINK_LIBS=-latomic',
   ]
 
   if sys.platform == 'darwin':
