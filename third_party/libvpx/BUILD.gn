@@ -403,7 +403,7 @@ static_library("libvpx") {
     }
   } else if (current_cpu == "ppc64") {
     sources = libvpx_srcs_ppc64
-  } else if (current_cpu == "riscv64" {
+  } else if (current_cpu == "riscv64") {
     sources = libvpx_srcs_generic
     public_deps = [ ":libvpx_generic_headers" ]
   }
