@@ -1835,7 +1835,7 @@ deps = {
     Var('starfive_git') + '/node.git' + '@' + '90b6bbab451b03d44f3b2c27426c9b2f3f276726',
 
   'src/content/nw':
-    Var('starfive_git') + 'nw.js.git' + '@' + '0b0e80be6860035c2fe9ad15dfea0e0e9f3e5413',
+    Var('starfive_git') + '/nw.js.git' + '@' + '0b0e80be6860035c2fe9ad15dfea0e0e9f3e5413',
 
   'src-internal': {
     'url': 'https://chrome-internal.googlesource.com/chrome/src-internal.git@22eb9de9eb80f46bc29976636c16289b7d327ced',
