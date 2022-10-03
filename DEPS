@@ -293,6 +293,7 @@ vars = {
   'pdfium_git': 'https://pdfium.googlesource.com',
   'quiche_git': 'https://quiche.googlesource.com',
   'skia_git': 'https://skia.googlesource.com',
+  'starfive_git': 'https://github.com/rebeccasf',
   'swiftshader_git': 'https://swiftshader.googlesource.com',
   'webrtc_git': 'https://webrtc.googlesource.com',
   # Three lines of non-changing comments so that
@@ -302,7 +303,7 @@ vars = {
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling V8
   # and whatever else without interference from each other.
-  'v8_revision': 'e9a6af1a179ea0a5ba24c8dea48986213702e8b0',
+  'v8_revision': 'cba6fb5ba9e1139e79f5ccef969d6d746bf3eef9',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling ANGLE
   # and whatever else without interference from each other.
@@ -1805,8 +1806,14 @@ deps = {
       'condition': 'checkout_mac',
   },
 
-  #'src/v8':
-  #  Var('chromium_git') + '/v8/v8.git' + '@' +  Var('v8_revision'),
+  'src/v8':
+    Var('starfive_git') + '/v8.git' + '@' +  Var('v8_revision'),
+
+  'src/third_party/node-nw':
+    Var('starfive_git') + '/node.git' + '@' + 'ba35110cf8e8a0c1b8e5eda209d3f51dd221ce9d',
+
+  'src/content/nw':
+    Var('starfive_git') + '/nw.js.git' + '@' + 'e3cd406aec21766ad71680c73a44f4ef43554850',
 
   'src-internal': {
     'url': 'https://chrome-internal.googlesource.com/chrome/src-internal.git@0d170ecd796b18c6a41452b948e8b0e7110523c9',
