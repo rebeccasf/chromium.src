@@ -1809,7 +1809,7 @@ deps = {
     Var('reb_git') + '/node.git' + '@' + '209c5d803d13fb9be560e5d80ff1f58e0ad3e142',
 
   'src/content/nw':
-    Var('reb_git') + '/nw.js.git' + '@' + '52deb9b9ed6d4209220ab47975455b73e655b465',
+    Var('reb_git') + '/nw.js.git' + '@' + '4ceb6d072dcfb8b1dfcd6720ec7559e182757de9',
 
   'src-internal': {
     'url': 'https://chrome-internal.googlesource.com/chrome/src-internal.git@d63d68d7ecdd892e8428f0b76c7f107a665e575e',
